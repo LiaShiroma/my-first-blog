@@ -18,9 +18,9 @@ def post_new(request):
     return render(request, 'blog/post_edit.html', {'form': form})
 
     if request.method == "POST":
-    form = PostForm(request.POST)
+    	form = PostForm(request.POST)
 	else:
-    form = PostForm()
+    	form = PostForm()
 
     if form.is_valid():
      post = form.save(commit=False)
